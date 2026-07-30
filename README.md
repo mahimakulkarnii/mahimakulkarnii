@@ -265,9 +265,10 @@ An examination of third-party cloud risk, breach response, continuous monitoring
 * [CompTIA CySA+](https://www.credly.com/badges/e7d95faf-5ae0-4240-b55a-448992a1ada0)
 * [CompTIA Security+](https://www.credly.com/badges/e2c65998-ea50-4ed5-b1dc-550451b9406f)
 * [CompTIA A+](https://www.credly.com/badges/097d5bf9-29d0-4b75-b6b4-bc20f0aca86d)
-* [ISC2 Certified in Cybersecurity](https://www.credly.com/badges/e5c9058e-6b6a-4309-b2c9-673a2d9d0841)
-* Cisco Network Support and Security
-* Cisco Endpoint Security
+* [ISC2 Certified in Cybersecurity (CC)](https://www.credly.com/badges/e5c9058e-6b6a-4309-b2c9-673a2d9d0841)
+* [Cisco Endpoint Security](https://www.credly.com/badges/5bdb7378-41a9-49cf-87c3-b61e898ea74f)
+* [Cisco Cyber Threat Management](https://www.credly.com/badges/75fa4a8a-6b0c-49bf-b6eb-f7b073509fa5)
+* [Cisco Network Support and Security](https://www.credly.com/badges/fb5f7871-77c4-4603-a223-dfd794a8798e)
 
 ## Education
 
