@@ -4,7 +4,7 @@
 
 ### Exploring cybersecurity across SOC operations, cloud, networks, applications, embedded systems, OT, hardware, and digital forensics 🔐
 
-[LinkedIn](https://www.linkedin.com/in/mahimakulkarni) • [Medium](https://medium.com/@mahimakulkarni1999) • [Featured Project](https://github.com/mahimakulkarnii/deleted-data-recovery-dfir)
+[LinkedIn](https://www.linkedin.com/in/mahimakulkarni) • [Medium](https://medium.com/@mahimakulkarni1999) • [GitHub Projects](https://github.com/mahimakulkarnii?tab=repositories)
 
 </div>
 
@@ -33,9 +33,21 @@ My interests span SOC operations and incident response, cloud identity and monit
 | 🖥️ Hardware & Systems              | PC assembly, BIOS/UEFI, Secure Boot, TPM, system hardening, Active Directory   |
 | 📋 GRC & Privacy                    | NIST CSF, NIST Privacy Framework, ISO 27001, GDPR, CCPA, SOC 2                 |
 
-## Featured Project
+## Featured Projects
 
-### [Deleted Data Recovery & Forensic Image Analysis](https://github.com/mahimakulkarnii/deleted-data-recovery-dfir)
+### 🌐 [Enterprise Network Segmentation & Firewall Lab](https://github.com/mahimakulkarnii/enterprise-network-segmentation-lab)
+
+Built a segmented enterprise-style network environment using pfSense, VirtualBox, and Ubuntu Linux.
+
+* Established separate User (`192.168.10.0/24`), Server (`192.168.20.0/24`), and Management (`192.168.99.0/24`) security zones
+* Configured dedicated pfSense gateway interfaces, DHCP services, DNS/NTP firewall permissions, and static Ubuntu addressing
+* Validated host-to-gateway connectivity across the User and Server network segments
+* Diagnosed and resolved Netplan, routing, addressing, and VirtualBox network-attachment issues
+* Documented the architecture, implementation, validation, and troubleshooting process with technical evidence
+
+**Tools & Technologies:** pfSense, VirtualBox, Ubuntu Linux, Netplan, TCP/IP, DHCP, DNS, NTP, ICMP
+
+### 🕵️ [Deleted Data Recovery & Forensic Image Analysis](https://github.com/mahimakulkarnii/deleted-data-recovery-dfir)
 
 A digital-forensics case study demonstrating:
 
@@ -124,11 +136,11 @@ Researched and demonstrated user and group management, role assignments, policy 
 
 <br>
 
-### Network Segmentation & Monitoring Home Lab
+### [Enterprise Network Segmentation & Firewall Lab](https://github.com/mahimakulkarnii/enterprise-network-segmentation-lab) — Published
 
-Built a pfSense lab with separate user, server, and management VLANs. Applied default-deny inter-VLAN policies, validated permitted and blocked traffic with Wireshark, and configured Snort IDS monitoring.
+Built a segmented virtual network using pfSense, VirtualBox, and Ubuntu Linux with separate User, Server, and Management security zones. Configured dedicated gateway interfaces, DHCP services, firewall rules, static addressing, and Netplan routing, then validated host-to-gateway connectivity and documented troubleshooting.
 
-**Tools:** pfSense, VLANs, Wireshark, Snort, managed switching, firewall rules
+**Tools:** pfSense, VirtualBox, Ubuntu Linux, Netplan, TCP/IP, DHCP, DNS, NTP, ICMP
 
 ### Router & Switch Configuration Lab
 
