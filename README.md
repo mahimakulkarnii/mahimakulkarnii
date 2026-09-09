@@ -2,7 +2,7 @@
 
 # Hi, I’m Mahima 👋
 
-### Exploring cybersecurity across SOC operations, cloud, networks, applications, embedded systems, OT, hardware, and digital forensics 🔐
+### Exploring cybersecurity across SOC operations, security automation, cloud, networks, applications, embedded systems, OT, hardware, and digital forensics 🔐
 
 [LinkedIn](https://www.linkedin.com/in/mahimakulkarni) • [Medium](https://medium.com/@mahimakulkarni1999) • [GitHub Projects](https://github.com/mahimakulkarnii?tab=repositories)
 
@@ -12,28 +12,43 @@
 
 I’m a cybersecurity professional interested in understanding how systems operate, how security weaknesses emerge, and how technical findings can be translated into practical risk-reduction decisions.
 
-My interests span SOC operations and incident response, cloud identity and monitoring, network defense, web and API security, digital forensics, embedded and IoT security, OT security fundamentals, hardware security, and governance.
+My interests span SOC operations and incident response, security automation and agentic AI, cloud identity and monitoring, network defense, web and API security, digital forensics, embedded and IoT security, OT security fundamentals, hardware security, and governance.
 
 * 🎓 M.S. in Technology, Cybersecurity & Policy
-* 🔐 Interested in technical security and risk-based decision-making
-* 📚 Currently strengthening my Splunk, cloud, SOC, and incident-response skills
+* 🔐 Interested in technical security, incident investigation, security automation, and risk-based decision-making
+* 🤖 Building agentic SOC workflows that combine Splunk, Python, LLM reasoning, and controlled security automation
+* 📚 Continuing to strengthen cloud, DFIR, network-defense, and detection-engineering skills
 * ✍️ Writing about cloud security, privacy, third-party risk, and data breaches
 * 🎤 Outside cybersecurity, I enjoy Bollywood singing
 
 ## Cybersecurity Focus
 
-| Area                                | Current Focus                                                                  |
-| ----------------------------------- | ------------------------------------------------------------------------------ |
-| 🔍 SOC & Incident Response          | Splunk, log analysis, alert triage, MITRE ATT&CK, YARA, security monitoring    |
-| 🕵️ Digital Forensics               | FTK Imager, Autopsy, Volatility, disk imaging, file carving, timeline analysis |
-| ☁️ Cloud Security & IAM             | Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL       |
-| 🌐 Network Security                 | pfSense, VLANs, Snort, Wireshark, firewalls, routing, switching                |
-| 🛡️ Web, Application & API Security | Burp Suite, Postman, OWASP ZAP, OAuth, SAST/DAST, OWASP Top 10                 |
-| 📡 Embedded, IoT & OT Security      | BLE, ESP32-C3, firmware security, SPI/UART, SCADA, Modbus, IEC 62443           |
-| 🖥️ Hardware & Systems              | PC assembly, BIOS/UEFI, Secure Boot, TPM, system hardening, Active Directory   |
-| 📋 GRC & Privacy                    | NIST CSF, NIST Privacy Framework, ISO 27001, GDPR, CCPA, SOC 2                 |
+| Area | Current Focus |
+| --- | --- |
+| 🔍 SOC & Incident Response | Splunk, log analysis, alert triage, incident investigation, MITRE ATT&CK, YARA, security monitoring |
+| 🤖 Security Automation & Agentic AI | Python, GPT-5.6, LLM tool calling, evidence-driven investigation, structured outputs, response guardrails |
+| 🕵️ Digital Forensics | FTK Imager, Autopsy, Volatility, disk imaging, file carving, timeline analysis |
+| ☁️ Cloud Security & IAM | Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL |
+| 🌐 Network Security | pfSense, VLANs, Snort, Wireshark, firewalls, routing, switching |
+| 🛡️ Web, Application & API Security | Burp Suite, Postman, OWASP ZAP, OAuth, SAST/DAST, OWASP Top 10 |
+| 📡 Embedded, IoT & OT Security | BLE, ESP32-C3, firmware security, SPI/UART, SCADA, Modbus, IEC 62443 |
+| 🖥️ Hardware & Systems | PC assembly, BIOS/UEFI, Secure Boot, TPM, system hardening, Active Directory |
+| 📋 GRC & Privacy | NIST CSF, NIST Privacy Framework, ISO 27001, GDPR, CCPA, SOC 2 |
 
 ## Featured Projects
+
+### 🤖 [Agentic SOC Investigation & Response Lab](https://github.com/mahimakulkarnii/agentic-soc-investigation)
+
+Built an agentic SOC investigation workflow that combines **Splunk Enterprise, Python, OpenAI GPT-5.6, structured function calling, asset context, threat intelligence, deterministic response policy, and human-reviewed containment guardrails**.
+
+* Built a multi-round investigation loop where GPT-5.6 determines what evidence is needed and selects from approved Python investigation tools
+* Integrated Python with the Splunk REST API to retrieve authentication, post-login, firewall, and system evidence using parameterized searches
+* Implemented input validation, strict tool schemas, index allowlisting, bounded investigation rounds, and restricted execution paths so the LLM cannot submit unrestricted SPL or arbitrary commands
+* Correlated authentication failures, successful access, post-login commands, firewall activity, system telemetry, asset context, and optional VirusTotal enrichment
+* Separated LLM reasoning from response authority using deterministic containment policy and human approval for disruptive actions
+* Evaluated the workflow against malicious, benign, and inconclusive controlled scenarios with explicit ground truth, matching expected classification and containment decisions in all three test cases
+
+**Tools & Technologies:** Splunk Enterprise, SPL, Python, OpenAI GPT-5.6, Responses API, function calling, REST APIs, VirusTotal API v3, incident response, security automation
 
 ### 🌐 [Enterprise Network Segmentation & Firewall Lab](https://github.com/mahimakulkarnii/enterprise-network-segmentation-lab)
 
@@ -60,12 +75,20 @@ A digital-forensics case study demonstrating:
 
 ## Project Portfolio
 
-Repository links will be added as additional project documentation becomes available.
-
 <details>
 <summary><strong>🔍 SOC Operations, Detection & Incident Response</strong></summary>
 
 <br>
+
+### [Agentic SOC Investigation & Response Lab](https://github.com/mahimakulkarnii/agentic-soc-investigation) — Published
+
+Built an agentic SOC workflow where **GPT-5.6 reasons about suspicious activity, selects approved investigation tools, Python retrieves structured evidence from Splunk and contextual sources, and deterministic policy controls whether containment can be requested**.
+
+The lab investigates authentication, post-login, firewall, and system telemetry through parameterized Splunk searches; supports asset-context and VirusTotal enrichment; validates model-requested parameters before execution; and prevents the LLM from directly executing unrestricted SPL or disruptive response actions.
+
+Tested the workflow against controlled **malicious, benign, and inconclusive scenarios** with explicit ground truth. The system matched the expected classification and containment decision in all three controlled test cases while keeping containment execution disabled and subject to human review.
+
+**Tools:** Splunk Enterprise, SPL, Python, OpenAI GPT-5.6, Responses API, function calling, REST APIs, VirusTotal API v3, incident response, security automation
 
 ### SOC Investigation & Monitoring Labs
 
@@ -284,17 +307,18 @@ An examination of third-party cloud risk, breach response, continuous monitoring
 
 ## Education
 
-**University of Colorado Boulder**
-M.S. in Technology, Cybersecurity & Policy
+**University of Colorado Boulder**  
+M.S. in Technology, Cybersecurity & Policy  
 GPA: 3.9/4.0
 
-**Visvesvaraya Technological University**
+**Visvesvaraya Technological University**  
 B.E. in Computer Science and Engineering
 
 ## What I’m Working On
 
-* Strengthening Splunk search, detection, and SOC investigation workflows
-* Expanding cloud identity, access-control, and monitoring labs
+* Building and evaluating agentic SOC investigation workflows using Splunk, Python, and LLM tool calling
+* Expanding detection, evidence-correlation, and incident-response automation scenarios
+* Strengthening cloud identity, access-control, and monitoring labs
 * Practicing digital-forensics and incident-response techniques
 * Developing network monitoring and segmentation scenarios
 * Exploring embedded, firmware, IoT, and OT security
@@ -302,6 +326,6 @@ B.E. in Computer Science and Engineering
 
 ## Let’s Connect
 
-I’m interested in connecting with cybersecurity professionals across SOC operations, cloud security, network defense, application security, digital forensics, embedded security, OT, and governance.
+I’m interested in connecting with cybersecurity professionals across SOC operations, incident response, security automation, cloud security, network defense, application security, digital forensics, embedded security, OT, and governance.
 
 [Connect with me on LinkedIn](https://www.linkedin.com/in/mahimakulkarni)
