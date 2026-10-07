@@ -28,7 +28,7 @@ My interests span SOC operations and incident response, security automation and 
 | 🔍 SOC & Incident Response | Splunk, log analysis, alert triage, incident investigation, MITRE ATT&CK, YARA, security monitoring |
 | 🤖 Security Automation & Agentic AI | Python, GPT-5.6, LLM tool calling, evidence-driven investigation, structured outputs, response guardrails |
 | 🕵️ Digital Forensics | FTK Imager, Autopsy, Volatility, disk imaging, file carving, timeline analysis |
-| ☁️ Cloud Security & IAM | Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL |
+| ☁️ Cloud Security & IAM | Google Cloud IAM, service accounts, Cloud KMS, Cloud Audit Logs, BigQuery, SQL; Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL |
 | 🌐 Network Security | pfSense, VLANs, Snort, Wireshark, firewalls, routing, switching |
 | 🛡️ Web, Application & API Security | Burp Suite, Postman, OWASP ZAP, OAuth, SAST/DAST, OWASP Top 10 |
 | 📡 Embedded, IoT & OT Security | BLE, ESP32-C3, firmware security, SPI/UART, SCADA, Modbus, IEC 62443 |
@@ -49,6 +49,20 @@ Built an agentic SOC investigation workflow that combines **Splunk Enterprise, P
 * Evaluated the workflow against malicious, benign, and inconclusive controlled scenarios with explicit ground truth, matching expected classification and containment decisions in all three test cases
 
 **Tools & Technologies:** Splunk Enterprise, SPL, Python, OpenAI GPT-5.6, Responses API, function calling, REST APIs, VirusTotal API v3, incident response, security automation
+
+### ☁️ [GCP Identity, Access and Monitoring Lab](https://github.com/mahimakulkarnii/gcp-iam-monitoring-lab)
+
+Built a Google Cloud security lab to test **least-privilege access, keyless VM authentication, and audit-log detections** using controlled workload activity.
+
+* Created custom IAM roles with object read/list permissions scoped to one bucket and decrypt permission scoped to one KMS key
+* Attached a service account to a Compute Engine VM so it authenticated through the metadata server without service-account JSON keys
+* Configured uniform bucket-level access and enforced public access prevention; stored only encrypted dummy data in the bucket
+* Validated five access tests: object read and KMS decrypt succeeded; VM listing, object upload, and KMS encrypt were denied
+* Exported Cloud Audit Logs to BigQuery and validated SQL for IAM policy changes, role-binding additions, decrypt activity, and denied KMS operations
+* Tuned the decrypt query to exclude the exact expected workload identity, key, and successful outcome while retaining an authorized human comparison event
+* Published build notes, SQL queries, test results, and 38 screenshots, with selected evidence embedded in the repository README
+
+**Tools & Technologies:** Google Cloud IAM, Compute Engine, service accounts, Cloud Storage, Cloud KMS, Cloud Audit Logs, BigQuery, SQL, gcloud
 
 ### 🌐 [Enterprise Network Segmentation & Firewall Lab](https://github.com/mahimakulkarnii/enterprise-network-segmentation-lab)
 
@@ -139,6 +153,14 @@ Explored memory-forensics and incident-reconstruction techniques for identifying
 <summary><strong>☁️ Cloud Security, IAM & Monitoring</strong></summary>
 
 <br>
+
+### [GCP Identity, Access and Monitoring Lab](https://github.com/mahimakulkarnii/gcp-iam-monitoring-lab) — Published
+
+Built a Compute Engine workload with an attached service account, bucket-scoped object read/list permissions, and key-scoped KMS decrypt permissions. Verified two allowed operations and three denied operations without creating service-account JSON keys.
+
+Exported Cloud Audit Logs to BigQuery and validated SQL against controlled IAM changes, role additions, successful decrypts, and a denied encryption event. Tuned the decrypt query against known-benign workload activity using an exact identity/key/success exception, retaining the authorized human comparison event. Queries were run manually; the lab did not implement scheduled alerts or collect VM operating-system logs.
+
+**Tools:** Google Cloud IAM, Compute Engine, Cloud Storage, Cloud KMS, service accounts, Cloud Audit Logs, BigQuery, SQL, gcloud
 
 ### Azure IAM & Monitoring Lab
 
@@ -318,7 +340,7 @@ B.E. in Computer Science and Engineering
 
 * Building and evaluating agentic SOC investigation workflows using Splunk, Python, and LLM tool calling
 * Expanding detection, evidence-correlation, and incident-response automation scenarios
-* Strengthening cloud identity, access-control, and monitoring labs
+* Deepening Google Cloud fundamentals after building and validating an IAM and audit-log monitoring lab
 * Practicing digital-forensics and incident-response techniques
 * Developing network monitoring and segmentation scenarios
 * Exploring embedded, firmware, IoT, and OT security
