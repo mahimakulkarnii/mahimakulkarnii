@@ -17,6 +17,7 @@ My interests span SOC operations and incident response, security automation and 
 * 🎓 M.S. in Technology, Cybersecurity & Policy
 * 🔐 Interested in technical security, incident investigation, security automation, and risk-based decision-making
 * 🤖 Building agentic SOC workflows that combine Splunk, Python, LLM reasoning, and controlled security automation
+* ☁️ Testing least-privilege workload access and investigating audit evidence in AWS and Google Cloud
 * 📚 Continuing to strengthen cloud, DFIR, network-defense, and detection-engineering skills
 * ✍️ Writing about cloud security, privacy, third-party risk, and data breaches
 * 🎤 Outside cybersecurity, I enjoy Bollywood singing
@@ -28,7 +29,7 @@ My interests span SOC operations and incident response, security automation and 
 | 🔍 SOC & Incident Response | Splunk, log analysis, alert triage, incident investigation, MITRE ATT&CK, YARA, security monitoring |
 | 🤖 Security Automation & Agentic AI | Python, GPT-5.6, LLM tool calling, evidence-driven investigation, structured outputs, response guardrails |
 | 🕵️ Digital Forensics | FTK Imager, Autopsy, Volatility, disk imaging, file carving, timeline analysis |
-| ☁️ Cloud Security & IAM | Google Cloud IAM, service accounts, Cloud KMS, Cloud Audit Logs, BigQuery, SQL; Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL |
+| ☁️ Cloud Security & IAM | AWS IAM, EC2 roles, S3, CloudTrail, CloudWatch, boto3; Google Cloud IAM, service accounts, Cloud KMS, Cloud Audit Logs, BigQuery, SQL; Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL |
 | 🌐 Network Security | pfSense, VLANs, Snort, Wireshark, firewalls, routing, switching |
 | 🛡️ Web, Application & API Security | Burp Suite, Postman, OWASP ZAP, OAuth, SAST/DAST, OWASP Top 10 |
 | 📡 Embedded, IoT & OT Security | BLE, ESP32-C3, firmware security, SPI/UART, SCADA, Modbus, IEC 62443 |
@@ -49,6 +50,20 @@ Built an agentic SOC investigation workflow that combines **Splunk Enterprise, P
 * Evaluated the workflow against malicious, benign, and inconclusive controlled scenarios with explicit ground truth, matching expected classification and containment decisions in all three test cases
 
 **Tools & Technologies:** Splunk Enterprise, SPL, Python, OpenAI GPT-5.6, Responses API, function calling, REST APIs, VirusTotal API v3, incident response, security automation
+
+### ☁️ [AWS IAM & Cloud Security Baseline](https://github.com/mahimakulkarnii/aws-iam-security-baseline)
+
+Built an AWS security lab to validate **least-privilege workload access, temporary role credentials, and reviewable audit evidence** through controlled API tests.
+
+* Scoped an IAM role to `s3:GetObject` on one exact object, with no action or resource wildcards in the workload permission policy
+* Attached the role to an EC2 instance through an instance profile so the workload used temporary credentials; no access keys were manually configured on the VM
+* Enabled all four S3 Block Public Access settings and created approved and restricted test objects
+* Verified that the approved object read succeeded while a restricted object read, a write to the approved object, and an EC2 inventory request were denied
+* Configured a multi-region CloudTrail trail with log file validation, management events, and S3 object data events scoped to the test bucket
+* Used Python and boto3 to inspect delivered CloudTrail logs, trace IAM setup events, and retrieve CloudWatch basic CPU metrics
+* Published JSON policies, three investigation scripts, captured reports, and a walkthrough with 24 screenshots; paused the lab with resources retained for further study
+
+**Tools & Technologies:** AWS IAM, S3, EC2, instance profiles, CloudTrail, CloudWatch, CloudShell, EC2 Instance Connect, AWS CLI, Python, boto3, JSON policies
 
 ### ☁️ [GCP Identity, Access and Monitoring Lab](https://github.com/mahimakulkarnii/gcp-iam-monitoring-lab)
 
@@ -153,6 +168,16 @@ Explored memory-forensics and incident-reconstruction techniques for identifying
 <summary><strong>☁️ Cloud Security, IAM & Monitoring</strong></summary>
 
 <br>
+
+### [AWS IAM & Cloud Security Baseline](https://github.com/mahimakulkarnii/aws-iam-security-baseline) — Published
+
+Built an EC2 workload with an attached IAM role permitting only `s3:GetObject` on one approved S3 object. Verified the approved read succeeded while a restricted read, an overwrite of the approved object, and an EC2 inventory request were denied. The workload authenticated with temporary role credentials, without manually configured access keys.
+
+Enabled S3 Block Public Access and configured CloudTrail management events and test-bucket S3 data events with delivery to a separate private audit bucket. Python queries read 18 delivered log files and identified six matching workload events, four IAM setup events, and seven CloudWatch CPU measurements. Recorded caller identities demonstrate assumed-role use; the lab did not capture a separate STS `AssumeRole` event or create CloudWatch alarms.
+
+Published policies, scripts, reports, and 24 screenshots. The instance is stopped and trail logging is paused, with existing resources retained for further study.
+
+**Tools:** AWS IAM, S3, EC2, instance profiles, CloudTrail, CloudWatch basic monitoring, CloudShell, EC2 Instance Connect, AWS CLI, Python, boto3, JSON policies
 
 ### [GCP Identity, Access and Monitoring Lab](https://github.com/mahimakulkarnii/gcp-iam-monitoring-lab) — Published
 
@@ -340,7 +365,8 @@ B.E. in Computer Science and Engineering
 
 * Building and evaluating agentic SOC investigation workflows using Splunk, Python, and LLM tool calling
 * Expanding detection, evidence-correlation, and incident-response automation scenarios
-* Deepening Google Cloud fundamentals after building and validating an IAM and audit-log monitoring lab
+* Deepening AWS and Google Cloud fundamentals after building and validating least-privilege workload access and audit-log investigation labs
+* Comparing workload identities, access policies, and audit evidence across AWS, Google Cloud, and Azure
 * Practicing digital-forensics and incident-response techniques
 * Developing network monitoring and segmentation scenarios
 * Exploring embedded, firmware, IoT, and OT security
