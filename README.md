@@ -385,6 +385,7 @@ An examination of third-party cloud risk, breach response, continuous monitoring
 
 ## Certifications
 
+* [Splunk Core Certified User](https://www.credly.com/badges/2845f131-d0c7-4687-814b-062ccd5aa72a)
 * [CompTIA CySA+](https://www.credly.com/badges/e7d95faf-5ae0-4240-b55a-448992a1ada0)
 * [CompTIA Security+](https://www.credly.com/badges/e2c65998-ea50-4ed5-b1dc-550451b9406f)
 * [CompTIA A+](https://www.credly.com/badges/097d5bf9-29d0-4b75-b6b4-bc20f0aca86d)
