@@ -29,7 +29,7 @@ My interests span SOC operations and incident response, security automation and 
 | 🔍 SOC & Incident Response | Splunk, log analysis, alert triage, incident investigation, MITRE ATT&CK, YARA, security monitoring |
 | 🤖 Security Automation & Agentic AI | Python, GPT-5.6, LLM tool calling, evidence-driven investigation, structured outputs, response guardrails |
 | 🕵️ Digital Forensics | FTK Imager, Autopsy, Volatility, disk imaging, file carving, timeline analysis |
-| ☁️ Cloud Security & IAM | AWS IAM, EC2 roles, S3, CloudTrail, CloudWatch, boto3; Google Cloud IAM, service accounts, Cloud KMS, Cloud Audit Logs, BigQuery, SQL; Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL |
+| ☁️ Cloud Security & IAM | AWS IAM, EC2 roles, S3, CloudTrail, CloudWatch, boto3; Google Cloud IAM, service accounts, Cloud KMS, Cloud Audit Logs, BigQuery, SQL; Azure, Entra ID, SharePoint Online, Microsoft Graph PowerShell, app-only access, `Sites.Selected`, RBAC, managed identities, Key Vault, Log Analytics, KQL |
 | 🌐 Network Security | pfSense, VLANs, Snort, Wireshark, firewalls, routing, switching |
 | 🔐 PKI & Transport Security | OpenSSL, X.509, root and intermediate CAs, certificate chains, TLS 1.3, mTLS, SAN validation, certificate troubleshooting |
 | 🛡️ Web, Application & API Security | Burp Suite, Postman, OWASP ZAP, OAuth, SAST/DAST, OWASP Top 10 |
@@ -79,6 +79,19 @@ Built a Google Cloud security lab to test **least-privilege access, keyless VM a
 * Published build notes, SQL queries, test results, and 38 screenshots, with selected evidence embedded in the repository README
 
 **Tools & Technologies:** Google Cloud IAM, Compute Engine, service accounts, Cloud Storage, Cloud KMS, Cloud Audit Logs, BigQuery, SQL, gcloud
+
+### 🔐 [Third-Party Access Risk Assessment](https://github.com/mahimakulkarnii/third-party-access-risk-lab)
+
+Assessed the effective SharePoint Online access of a simulated vendor application using a controlled tenant and synthetic files.
+
+* Created two SharePoint sites with fictional documents at different sensitivity levels
+* Configured app-only access through Microsoft Graph PowerShell using a site-scoped `Sites.Selected` grant
+* Tested the app’s effective reach by listing files and reading a fictional finance document on the granted site
+* Moved the site-level grant to the vendor catalog site and verified the catalog was accessible while a request to the original site returned **HTTP 403**
+* Reviewed Microsoft Entra service-principal sign-in and audit evidence, documenting what the available records showed and what they did not confirm about file-level activity
+* Published the PowerShell scripts, data inventory, test matrix, prioritized findings, and access-reduction recommendations
+
+**Tools & Technologies:** SharePoint Online, Microsoft Entra ID, Microsoft Graph, Microsoft Graph PowerShell, app-only authentication, `Sites.Selected`, access reviews, data classification, PowerShell
 
 ### 🔐 [TLS and PKI Lab](https://github.com/mahimakulkarnii/tls-pki-lab)
 
@@ -201,6 +214,16 @@ Exported Cloud Audit Logs to BigQuery and validated SQL against controlled IAM c
 
 **Tools:** Google Cloud IAM, Compute Engine, Cloud Storage, Cloud KMS, service accounts, Cloud Audit Logs, BigQuery, SQL, gcloud
 
+### [Third-Party Access Risk Assessment](https://github.com/mahimakulkarnii/third-party-access-risk-lab) — Published
+
+Assessed a simulated vendor application’s effective access to SharePoint Online using Microsoft Graph PowerShell and a site-scoped `Sites.Selected` grant.
+
+Created two sites with fictional files at different sensitivity levels, tested app-only access to the granted site, and verified the access boundary after moving the grant to the vendor catalog site. The catalog remained accessible while a request to the original site returned **HTTP 403**.
+
+Reviewed Microsoft Entra service-principal sign-in and audit evidence, then documented the limits of the available evidence for confirming file-level activity. Published the scripts, data inventory, test matrix, prioritized findings, and recommendations.
+
+**Tools:** SharePoint Online, Microsoft Entra ID, Microsoft Graph, Microsoft Graph PowerShell, app-only authentication, `Sites.Selected`, access reviews, data classification, PowerShell
+
 ### Azure IAM & Monitoring Lab
 
 Built an Azure environment with a Linux VM, Storage Account, and Key Vault. Implemented least-privilege RBAC, Entra ID groups, managed identities, secure data-transfer settings, and KQL monitoring for privilege and secret-access activity.
@@ -257,15 +280,9 @@ Developed a Java-based link-state routing project using sockets, threading, neig
 
 ### Web & API Vulnerability Assessment
 
-Built vulnerable application environments and tested web and API endpoints for SQL injection, cross-site scripting, authentication weaknesses, authorization flaws, and insecure data exposure.
+Tested web applications and API endpoints in controlled environments for SQL injection, cross-site scripting, authentication weaknesses, authorization flaws, and insecure data exposure.
 
 **Tools:** Burp Suite, OWASP ZAP, Postman, Nmap, Docker, DVWA, OWASP Top 10
-
-### Third-Party API Security Assessment
-
-Assessed third-party APIs for authentication weaknesses, authorization flaws, token-handling risks, and insecure data exposure. Researched OAuth attack techniques and mapped findings to the OWASP API Security Top 10.
-
-**Tools and concepts:** Burp Suite, Postman, OAuth, API authorization, OWASP API Security Top 10
 
 ### Linux & Web Penetration Testing Lab
 
