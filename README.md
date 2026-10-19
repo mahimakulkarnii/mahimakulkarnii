@@ -1,8 +1,8 @@
 <div align="center">
 
-# Hi, I’m Mahima 👋
+# Hi, I’m Mahima
 
-### Exploring cybersecurity across SOC operations, security automation, cloud, networks, applications, embedded systems, OT, hardware, and digital forensics 🔐
+### Exploring cybersecurity across SOC operations, security automation, cloud, networks, applications, PKI, embedded systems, OT, hardware, and digital forensics
 
 [LinkedIn](https://www.linkedin.com/in/mahimakulkarni) • [Medium](https://medium.com/@mahimakulkarni1999) • [GitHub Projects](https://github.com/mahimakulkarnii?tab=repositories)
 
@@ -12,33 +12,35 @@
 
 I’m a cybersecurity professional interested in understanding how systems operate, how security weaknesses emerge, and how technical findings can be translated into practical risk-reduction decisions.
 
-My interests span SOC operations and incident response, security automation and agentic AI, cloud identity and monitoring, network defense, web and API security, digital forensics, embedded and IoT security, OT security fundamentals, hardware security, and governance.
+My interests span SOC operations and incident response, security automation and agentic AI, cloud identity and monitoring, network defense, PKI and transport security, web and API security, digital forensics, embedded and IoT security, OT security fundamentals, hardware security, and governance.
 
-* 🎓 M.S. in Technology, Cybersecurity & Policy
-* 🔐 Interested in technical security, incident investigation, security automation, and risk-based decision-making
-* 🤖 Building agentic SOC workflows that combine Splunk, Python, LLM reasoning, and controlled security automation
-* ☁️ Testing least-privilege workload access and investigating audit evidence in AWS and Google Cloud
-* 📚 Continuing to strengthen cloud, DFIR, network-defense, and detection-engineering skills
-* ✍️ Writing about cloud security, privacy, third-party risk, and data breaches
-* 🎤 Outside cybersecurity, I enjoy Bollywood singing
+* M.S. in Technology, Cybersecurity & Policy
+* Interested in technical security, incident investigation, security automation, and risk-based decision-making
+* Building agentic SOC workflows that combine Splunk, Python, LLM reasoning, and controlled security automation
+* Testing least-privilege workload access and investigating audit evidence in AWS and Google Cloud
+* Building certificate infrastructures and troubleshooting TLS trust, identity, and authentication failures
+* Continuing to strengthen cloud, DFIR, network-defense, and detection-engineering skills
+* Writing about cloud security, privacy, third-party risk, and data breaches
+* Outside cybersecurity, I enjoy Bollywood singing
 
 ## Cybersecurity Focus
 
 | Area | Current Focus |
 | --- | --- |
-| 🔍 SOC & Incident Response | Splunk, log analysis, alert triage, incident investigation, MITRE ATT&CK, YARA, security monitoring |
-| 🤖 Security Automation & Agentic AI | Python, GPT-5.6, LLM tool calling, evidence-driven investigation, structured outputs, response guardrails |
-| 🕵️ Digital Forensics | FTK Imager, Autopsy, Volatility, disk imaging, file carving, timeline analysis |
-| ☁️ Cloud Security & IAM | AWS IAM, EC2 roles, S3, CloudTrail, CloudWatch, boto3; Google Cloud IAM, service accounts, Cloud KMS, Cloud Audit Logs, BigQuery, SQL; Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL |
-| 🌐 Network Security | pfSense, VLANs, Snort, Wireshark, firewalls, routing, switching |
-| 🛡️ Web, Application & API Security | Burp Suite, Postman, OWASP ZAP, OAuth, SAST/DAST, OWASP Top 10 |
-| 📡 Embedded, IoT & OT Security | BLE, ESP32-C3, firmware security, SPI/UART, SCADA, Modbus, IEC 62443 |
-| 🖥️ Hardware & Systems | PC assembly, BIOS/UEFI, Secure Boot, TPM, system hardening, Active Directory |
-| 📋 GRC & Privacy | NIST CSF, NIST Privacy Framework, ISO 27001, GDPR, CCPA, SOC 2 |
+| SOC & Incident Response | Splunk, log analysis, alert triage, incident investigation, MITRE ATT&CK, YARA, security monitoring |
+| Security Automation & Agentic AI | Python, GPT-5.6, LLM tool calling, evidence-driven investigation, structured outputs, response guardrails |
+| Digital Forensics | FTK Imager, Autopsy, Volatility, disk imaging, file carving, timeline analysis |
+| Cloud Security & IAM | AWS IAM, EC2 roles, S3, CloudTrail, CloudWatch, boto3; Google Cloud IAM, service accounts, Cloud KMS, Cloud Audit Logs, BigQuery, SQL; Azure, Entra ID, RBAC, managed identities, Key Vault, Log Analytics, KQL |
+| Network Security | pfSense, VLANs, Snort, Wireshark, firewalls, routing, switching |
+| PKI & Transport Security | OpenSSL, X.509, root and intermediate CAs, certificate chains, TLS 1.3, mTLS, SAN validation, certificate troubleshooting |
+| Web, Application & API Security | Burp Suite, Postman, OWASP ZAP, OAuth, SAST/DAST, OWASP Top 10 |
+| Embedded, IoT & OT Security | BLE, ESP32-C3, firmware security, SPI/UART, SCADA, Modbus, IEC 62443 fundamentals |
+| Hardware & Systems | PC assembly, BIOS/UEFI, Secure Boot, TPM, system hardening, Active Directory |
+| GRC & Privacy | NIST CSF, NIST Privacy Framework, ISO 27001, GDPR, CCPA, SOC 2 |
 
 ## Featured Projects
 
-### 🤖 [Agentic SOC Investigation & Response Lab](https://github.com/mahimakulkarnii/agentic-soc-investigation)
+### [Agentic SOC Investigation & Response Lab](https://github.com/mahimakulkarnii/agentic-soc-investigation)
 
 Built an agentic SOC investigation workflow that combines **Splunk Enterprise, Python, OpenAI GPT-5.6, structured function calling, asset context, threat intelligence, deterministic response policy, and human-reviewed containment guardrails**.
 
@@ -51,7 +53,7 @@ Built an agentic SOC investigation workflow that combines **Splunk Enterprise, P
 
 **Tools & Technologies:** Splunk Enterprise, SPL, Python, OpenAI GPT-5.6, Responses API, function calling, REST APIs, VirusTotal API v3, incident response, security automation
 
-### ☁️ [AWS IAM & Cloud Security Baseline](https://github.com/mahimakulkarnii/aws-iam-security-baseline)
+### [AWS IAM & Cloud Security Baseline](https://github.com/mahimakulkarnii/aws-iam-security-baseline)
 
 Built an AWS security lab to validate **least-privilege workload access, temporary role credentials, and reviewable audit evidence** through controlled API tests.
 
@@ -65,7 +67,7 @@ Built an AWS security lab to validate **least-privilege workload access, tempora
 
 **Tools & Technologies:** AWS IAM, S3, EC2, instance profiles, CloudTrail, CloudWatch, CloudShell, EC2 Instance Connect, AWS CLI, Python, boto3, JSON policies
 
-### ☁️ [GCP Identity, Access and Monitoring Lab](https://github.com/mahimakulkarnii/gcp-iam-monitoring-lab)
+### [GCP Identity, Access and Monitoring Lab](https://github.com/mahimakulkarnii/gcp-iam-monitoring-lab)
 
 Built a Google Cloud security lab to test **least-privilege access, keyless VM authentication, and audit-log detections** using controlled workload activity.
 
@@ -79,7 +81,20 @@ Built a Google Cloud security lab to test **least-privilege access, keyless VM a
 
 **Tools & Technologies:** Google Cloud IAM, Compute Engine, service accounts, Cloud Storage, Cloud KMS, Cloud Audit Logs, BigQuery, SQL, gcloud
 
-### 🌐 [Enterprise Network Segmentation & Firewall Lab](https://github.com/mahimakulkarnii/enterprise-network-segmentation-lab)
+### [TLS and PKI Lab](https://github.com/mahimakulkarnii/tls-pki-lab)
+
+Built a two-tier certificate infrastructure to investigate **HTTPS trust failures, certificate-chain validation, and mutual TLS authentication** using OpenSSL, Python, and curl.
+
+* Created a root CA, intermediate issuing CA, and separate server and client certificates with purpose-specific X.509 extensions
+* Validated certificate chains, validity periods, and Subject Alternative Names for a local HTTPS server
+* Reproduced and resolved four certificate failures: an untrusted root, a missing intermediate, a hostname mismatch, and an expired certificate
+* Demonstrated that an untrusted root and a missing intermediate can produce the same client error, distinguishing the causes through controlled tests
+* Configured mutual TLS and verified rejection without a client certificate and HTTP 200 with a valid client identity
+* Confirmed certificate/private-key matching and inspected the live server chain; published a troubleshooting runbook, reusable generation script, captured logs, and 20 screenshots
+
+**Tools & Technologies:** OpenSSL, PKI, X.509, TLS 1.3, mTLS, Python, curl, Bash, certificate chains, SAN, key usage, extended key usage
+
+### [Enterprise Network Segmentation & Firewall Lab](https://github.com/mahimakulkarnii/enterprise-network-segmentation-lab)
 
 Built a segmented enterprise-style network environment using pfSense, VirtualBox, and Ubuntu Linux.
 
@@ -91,7 +106,7 @@ Built a segmented enterprise-style network environment using pfSense, VirtualBox
 
 **Tools & Technologies:** pfSense, VirtualBox, Ubuntu Linux, Netplan, TCP/IP, DHCP, DNS, NTP, ICMP
 
-### 🕵️ [Deleted Data Recovery & Forensic Image Analysis](https://github.com/mahimakulkarnii/deleted-data-recovery-dfir)
+### [Deleted Data Recovery & Forensic Image Analysis](https://github.com/mahimakulkarnii/deleted-data-recovery-dfir)
 
 A digital-forensics case study demonstrating:
 
@@ -105,7 +120,7 @@ A digital-forensics case study demonstrating:
 ## Project Portfolio
 
 <details>
-<summary><strong>🔍 SOC Operations, Detection & Incident Response</strong></summary>
+<summary><strong>SOC Operations, Detection & Incident Response</strong></summary>
 
 <br>
 
@@ -140,7 +155,7 @@ Practiced incident notification, information gathering, containment, escalation,
 </details>
 
 <details>
-<summary><strong>🕵️ Digital Forensics</strong></summary>
+<summary><strong>Digital Forensics</strong></summary>
 
 <br>
 
@@ -165,7 +180,7 @@ Explored memory-forensics and incident-reconstruction techniques for identifying
 </details>
 
 <details>
-<summary><strong>☁️ Cloud Security, IAM & Monitoring</strong></summary>
+<summary><strong>Cloud Security, IAM & Monitoring</strong></summary>
 
 <br>
 
@@ -202,9 +217,19 @@ Researched and demonstrated user and group management, role assignments, policy 
 </details>
 
 <details>
-<summary><strong>🌐 Network Security & Monitoring</strong></summary>
+<summary><strong>Network Security, PKI & Transport Security</strong></summary>
 
 <br>
+
+### [TLS and PKI Lab](https://github.com/mahimakulkarnii/tls-pki-lab) — Published
+
+Built a local two-tier PKI and secured a Python HTTPS server using certificates issued through a root and intermediate CA. Reproduced and resolved untrusted-root, missing-intermediate, hostname-mismatch, and expired-certificate failures, capturing actual client errors and successful retests.
+
+Required client certificate authentication through mutual TLS, verified rejection without a client identity and successful access with one, and confirmed certificate/key matching and the chain presented by the running server.
+
+Published a reusable certificate-generation script, troubleshooting runbook, reproduction instructions, captured logs, and 20 screenshots. The lab demonstrates client authentication; application-level authorization, revocation checking, and automated renewal are planned extensions.
+
+**Tools:** OpenSSL, X.509, PKI, TLS 1.3, mTLS, Python, curl, Bash
 
 ### [Enterprise Network Segmentation & Firewall Lab](https://github.com/mahimakulkarnii/enterprise-network-segmentation-lab) — Published
 
@@ -227,7 +252,7 @@ Developed a Java-based link-state routing project using sockets, threading, neig
 </details>
 
 <details>
-<summary><strong>🛡️ Web, Application & API Security</strong></summary>
+<summary><strong>Web, Application & API Security</strong></summary>
 
 <br>
 
@@ -252,7 +277,7 @@ Conducted reconnaissance and controlled exploitation against exposed FTP, SSH, T
 </details>
 
 <details>
-<summary><strong>📡 Embedded, IoT & OT Security</strong></summary>
+<summary><strong>Embedded, IoT & OT Security</strong></summary>
 
 <br>
 
@@ -279,7 +304,7 @@ Studying the security considerations of industrial environments, including netwo
 </details>
 
 <details>
-<summary><strong>🖥️ Hardware, Systems & Security Baselines</strong></summary>
+<summary><strong>Hardware, Systems & Security Baselines</strong></summary>
 
 <br>
 
@@ -302,7 +327,7 @@ Built and tested Ethernet cables using the TIA-568B standard and diagnosed physi
 </details>
 
 <details>
-<summary><strong>📋 Governance, Risk, Compliance & Privacy</strong></summary>
+<summary><strong>Governance, Risk, Compliance & Privacy</strong></summary>
 
 <br>
 
@@ -367,6 +392,7 @@ B.E. in Computer Science and Engineering
 * Expanding detection, evidence-correlation, and incident-response automation scenarios
 * Deepening AWS and Google Cloud fundamentals after building and validating least-privilege workload access and audit-log investigation labs
 * Comparing workload identities, access policies, and audit evidence across AWS, Google Cloud, and Azure
+* Planning PKI extensions covering certificate revocation, renewal workflows, client authorization, and expiration monitoring
 * Practicing digital-forensics and incident-response techniques
 * Developing network monitoring and segmentation scenarios
 * Exploring embedded, firmware, IoT, and OT security
@@ -374,6 +400,6 @@ B.E. in Computer Science and Engineering
 
 ## Let’s Connect
 
-I’m interested in connecting with cybersecurity professionals across SOC operations, incident response, security automation, cloud security, network defense, application security, digital forensics, embedded security, OT, and governance.
+I’m interested in connecting with cybersecurity professionals across SOC operations, incident response, security automation, cloud security, network defense, PKI, application security, digital forensics, embedded security, OT, and governance.
 
 [Connect with me on LinkedIn](https://www.linkedin.com/in/mahimakulkarni)
